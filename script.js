@@ -31,4 +31,6 @@ function enviarDados() {
                   `Endereço: ${localStorage.getItem('endereco')}%0A` +
                   `Email: ${localStorage.getItem('email')}%0A` +
                   `Telefone: ${localStorage.getItem('telefone')}`;
+    
+    window.open(`https://api.whatsapp.com/send?phone=${tel}&text=${texto}`, '_blank');
 }
