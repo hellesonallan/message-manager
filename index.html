@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário com LocalStorage</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -35,12 +34,11 @@
                             </div>
                             
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button type="button" class="btn btn-primary me-md-2" id="btnGravar">Gravar</button>
-                                <button type="button" class="btn btn-secondary" id="btnExibir">Exibir</button>
+                                <button type="button" class="btn btn-primary me-md-2" id="btnGravar" onclick="gravarDados()">Gravar</button>
+                                <button type="button" class="btn btn-secondary" id="btnExibir" onclick="exibirDados()">Exibir</button>
                             </div>
                         </form>
                         
-                        <!-- Área de exibição dos dados -->
                         <div id="dadosExibidos" class="mt-4 p-3 border rounded d-none">
                             <h4>Dados Armazenados:</h4>
                             <div id="conteudoDados"></div>
@@ -51,9 +49,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Nosso script -->
     <script src="script.js"></script>
 </body>
 </html>
