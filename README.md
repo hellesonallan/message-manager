@@ -1,5 +1,4 @@
 # message-manager
-# Message Storage & Sender
 Um projeto web (HTML + CSS + JavaScript) para armazenar e enviar mensagens de forma simples e eficiente.
 
 🔹 # Recursos:
