@@ -9,26 +9,26 @@ function gravarDados() {
     localStorage.setItem('email', email);
     localStorage.setItem('telefone', telefone);
 
-    alert('Dados gravados com sucesso!');
+    alert('Dados gravados.');
 }
 
 function exibirDados() {
-    const nome = localStorage.getItem('nome');
-    const endereco = localStorage.getItem('endereco');
-    const email = localStorage.getItem('email');
-    const telefone = localStorage.getItem('telefone');
     const dadosExibidos = document.getElementById('dadosExibidos');
-    const conteudoDados = document.getElementById('conteudoDados');
+    dadosExibidos.innerHTML = `
+        <h4>Dados Armazenados:</h4>
+        <p><strong>Nome:</strong> ${localStorage.getItem('nome') || 'N/A'}</p>
+        <p><strong>Endereço:</strong> ${localStorage.getItem('endereco') || 'N/A'}</p>
+        <p><strong>E-mail:</strong> ${localStorage.getItem('email') || 'N/A'}</p>
+        <p><strong>Telefone:</strong> ${localStorage.getItem('telefone') || 'N/A'}</p>
+    `;
+    dadosExibidos.classList.remove('d-none');
+}
 
-    if (nome || endereco || email || telefone) {
-        conteudoDados.innerHTML = `
-            <p><strong>Nome:</strong> ${nome || 'Não informado'}</p>
-            <p><strong>Endereço:</strong> ${endereco || 'Não informado'}</p>
-            <p><strong>E-mail:</strong> ${email || 'Não informado'}</p>
-            <p><strong>Telefone:</strong> ${telefone || 'Não informado'}</p>
-        `;
-        dadosExibidos.classList.remove('d-none');
-    } else {
-        alert('Nenhum dado encontrado no localStorage!');
-    }
+function enviarDados() {
+    const tel = document.getElementById('telefoneEnvio').value.replace(/\D/g, '');
+    const texto = `*Dados:*%0A` +
+                  `Nome: ${localStorage.getItem('nome')}%0A` +
+                  `Endereço: ${localStorage.getItem('endereco')}%0A` +
+                  `Email: ${localStorage.getItem('email')}%0A` +
+                  `Telefone: ${localStorage.getItem('telefone')}`;
 }

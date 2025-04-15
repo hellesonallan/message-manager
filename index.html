@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário com LocalStorage</title>
+    <title>Cadastro + WhatsApp</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light">
@@ -15,27 +15,32 @@
                         <h3 class="mb-0">Cadastro de Usuário</h3>
                     </div>
                     <div class="card-body">
-                        <form id="userForm">
+                        <form>
                             <div class="mb-3">
-                                <label for="nome" class="form-label">Nome</label>
+                                <label class="form-label">Nome</label>
                                 <input type="text" class="form-control" id="nome" required>
                             </div>
                             <div class="mb-3">
-                                <label for="endereco" class="form-label">Endereço</label>
+                                <label class="form-label">Endereço</label>
                                 <input type="text" class="form-control" id="endereco" required>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">E-mail</label>
+                                <label class="form-label">E-mail</label>
                                 <input type="email" class="form-control" id="email" required>
                             </div>
                             <div class="mb-3">
-                                <label for="telefone" class="form-label">Telefone</label>
+                                <label class="form-label">Telefone</label>
                                 <input type="tel" class="form-control" id="telefone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Telefone para Envio</label>
+                                <input type="tel" class="form-control" id="telefoneEnvio" required>
                             </div>
                             
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button type="button" class="btn btn-primary me-md-2" id="btnGravar" onclick="gravarDados()">Gravar</button>
-                                <button type="button" class="btn btn-secondary" id="btnExibir" onclick="exibirDados()">Exibir</button>
+                                <button type="button" class="btn btn-primary" onclick="gravarDados()">Gravar</button>
+                                <button type="button" class="btn btn-secondary" onclick="exibirDados()">Exibir</button>
+                                <button type="button" class="btn btn-success" onclick="enviarDados()">Enviar</button>
                             </div>
                         </form>
                         
@@ -48,8 +53,3 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
